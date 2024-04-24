@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    font-family: "Noto Serif", serif;
+    align-items: center;
+    font-size: 22px;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: rgb(208, 206, 206);
+    background: linear-gradient(
+        rgb(0, 21, 90),
+        rgb(2, 35, 136),
+        rgb(2, 52, 201))
+        ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    border-bottom: 4px groove rgb(40, 93, 251);
+    
+}
+
+.tittle{
+    position: relative;
+    padding-left: 30px; 
+}
+
+.logo{    
+    width: 150px;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+ body{
+    background: linear-gradient(
+        rgba(1, 10, 180, 0.784), 
+        rgba(1, 1, 109, 0.864),
+        rgba(9, 4, 103, 0.825)
+        ),
+        url(banco\ imagenes/fondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 20px;
+    background: radial-gradient(
+        rgb(17, 61, 205),
+        rgb(9, 46, 155),
+        rgb(4, 33, 127))
+        ;
+    box-shadow: 7px 13px 37px rgb(3, 30, 109);
+}
+
+.container h1{
+    font-family: "Noto Serif", serif;
+    color: rgb(208, 206, 206);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.candidata {
+    width: calc(25% - 60px);
+    margin-bottom: 10px;
+    background: linear-gradient(
+        rgb(105, 105, 106),
+        rgb(134, 134, 135),
+        rgb(188, 188, 188))
+        ;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.candidata:hover{
+    cursor: pointer;
+    background: linear-gradient(
+        rgb(126, 99, 2),
+        rgb(149, 122, 1), 
+        rgb(192, 173, 0)
+        );
+    box-shadow: 5px 5px 5px rgba(212, 211, 211, 0.491);
+}
+
+.candidata img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+    
+
+@media screen and (max-width: 768px) {
+    .candidata {
+        width: calc(50% - 20px); /* Dos columnas en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .candidata {
+        width: 100%; /* Una columna en pantallas muy pequeñas */
+    }
+    .modal{
+        width: 100%;
+    }
+}
+
+.name{
+    font-size: 25px;
+    padding-top: 10px;
+    font-family: "Noto Serif", serif;
+    color: rgb(15, 15, 15);
+}
+
+.description{
+    font-family: "Petit Formal Script", cursive;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.descripcion{
+    font-family: "Petit Formal Script", cursive;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 120%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background: linear-gradient(
+        rgb(105, 105, 106),
+        rgb(134, 134, 135),
+        rgb(188, 188, 188)
+        );
+    box-shadow: 5px 5px 5px rgba(212, 211, 211, 0.491);
+    margin: 10% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-sizing: border-box;    
+}
+
+.modal .modal-content img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal-image{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;   
+    line-height: 25px; 
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.votar{
+    font-family: "Noto Serif", serif;  
+    font-weight: 500;  
+    border-color: rgb(165, 165, 163);
+    border-width: 1px;
+    border-style: groove;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 25px;
+    color: rgb(15, 15, 15);
+}
+
+.votar:hover{
+    background: linear-gradient(
+        rgb(181, 180, 180),
+        rgb(212, 212, 212),
+        rgb(168, 167, 167)
+        );
+    cursor: pointer;
+}
+
+

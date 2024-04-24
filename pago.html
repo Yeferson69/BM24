@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación con Pago Virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&family=Srisakdi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PAGO.CSS">
+</head>
+<header>
+    <img class="logo" src="logo.png">
+    <h1 class="tittle">Ingresa tus datos y guarda tu elección:</h1>
+</header>
+<body>
+<section class="page">  
+        <div class="candidata">
+            <h1>Candidata Seleccionada:</h1>
+            <img id="fotoCandidata" src="" alt="">
+            <h2 class="name" id="nombreCandidata"></h2>
+            <p class="description" id="descripcionCandidata"></p>
+        </div>
+
+    <section class="formulario">
+        <h3> Realiza tu pago para que tu voto sea guardado correctamente</h3>
+        <form id="votingForm" action="conection.php" method="post">
+                <p class="hidden" id="nameSel" name="nameSeleccionada"></p>
+                <p class="hidden" id="desSel" name="descripcionSeleccionada"></p>
+                <p class="hidden" id="Categoria" name="categoria"></p>
+                <input class="controls" type="text" id="name" name="user_name" required placeholder="Ingrese su Nombre"/>
+                <input class="controls" type="email" id="correo" name="user_correo" required placeholder="Ingrese su Email"/>
+                <input class="controls" type="number" id="celular" name="user_phone" required placeholder="Ingrese su Celular"/>
+            
+            <input type="submit" value="enviar voto">
+
+        </form>
+    </section>  
+</section>
+<script src="PAGO.JS"> </script>
+</body>
+</html>

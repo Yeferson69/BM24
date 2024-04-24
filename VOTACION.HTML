@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Petit+Formal+Script&family=Srisakdi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="VOTACION.CSS">
+</head>
+<header>
+    <img class="logo" src="logo.png">
+    <h1 class="tittle">Selecciona a tu candidata favorita según la categoría que prefieras: </h1>
+</header>
+<body>
+    <div class="container">
+        <h1>Candidatas</h1>
+        <div class="columnas">
+            <div class="candidata" onclick="mostrarModal('KATTY PALMERA', 'Imagenes candidatas/ctg-sra/sra-bolivar.jpg', 'Sra. Bolivar', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-bolivar.jpg" alt="Candidata 1">
+                <h2 class="name">KATTY PALMERA</h2>
+                <p class="description">Sra. Bolivar</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('SANDRA ANGEL', 'Imagenes candidatas/ctg-sra/sra-caldas.jpg', 'Sra. Caldas', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-caldas.jpg" alt="Candidata 2">
+                <h2 class="name">SANDRA ANGEL</h2>
+                <p class="description">Sra. Caldas</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('LINA JABIB', 'Imagenes candidatas/ctg-sra/sra-cordoba.jpg', 'Sra. Cordoba', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-cordoba.jpg" alt="Candidata 3">
+                <h2 class="name">LINA JABIB</h2>
+                <p class="description">Sra. Cordoba</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('ALBA RIVADENEIRA', 'Imagenes candidatas/ctg-sra/sra-guajira.jpg', 'Sra. Guajira', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-guajira.jpg" alt="Candidata 4">
+                <h2 class="name">ALBA RIVADENEIRA</h2>
+                <p class="description">Sra. Guajira</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('ANA ESCOBAR', 'Imagenes candidatas/ctg-sra/sra-ns.jpg', 'Sra. Norte de Santander', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-ns.jpg" alt="Candidata 5">
+                <h2 class="name">ANA ESCOBAR</h2>
+                <p class="description">Sra. Norte de Santander</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('MARTA TORRES', 'Imagenes candidatas/ctg-sra/sra-risaralda.jpg', 'Sra. Risaralda', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-risaralda.jpg" alt="Candidata 6">
+                <h2 class="name">MARTA TORRES</h2>
+                <p class="description">Sra. Risaralda</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('ANDREA OSARIO', 'Imagenes candidatas/ctg-sra/sra-santander.jpg', 'Sra. Santander', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-santander.jpg" alt="Candidata 7">
+                <h2 class="name">ANDREA OSARIO</h2>
+                <p class="description">Sra. Santander</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('DANIELA GARCÉS', 'Imagenes candidatas/ctg-sra/sra-snandres.jpg', 'Sra. San Andrés y Providencia', 'Sra')">
+                <img src="Imagenes candidatas/ctg-sra/sra-snandres.jpg" alt="Candidata 8">
+                <h2 class="name">DANIELA GARCÉS</h2>
+                <p class="description">Sra. San Andrés y Providencia</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('VALENTINA JIMÉNEZ', 'Imagenes candidatas/ctg-miss/miss-cundinamarca.jpg', 'Miss. cundinamarca', 'Miss')">
+                <img src="Imagenes candidatas/ctg-miss/miss-cundinamarca.jpg" alt="Candidata 1">
+                <h2 class="name">VALENTINA JIMÉNEZ</h2>
+                <p class="description">Miss. Cundinamarca</p>
+            </div>
+            <div class="candidata" onclick="mostrarModal('ANA MARIA MADRID', 'Imagenes candidatas/ctg-miss/miss-tolima.jpg', 'Miss. Tolima', 'Miss')">
+                <img src="Imagenes candidatas/ctg-miss/miss-tolima.jpg" alt="Candidata 3">
+                <h2 class="name">ANA MARIA MADRID</h2>
+                <p class="description">Miss. Tolima</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>            
+            <div class="modal-image">
+                <img  id="fotoCandidata" src="" alt="">
+                <h2 class="name" id="nombreCandidata"></h2>         
+                <p class="descripcion" id="descripcionCandidata"></p>
+                <p class="hidden" id="categoria"></p>
+                <a class="votar" href="pago.html" onclick="guardarCandidata()">Votar</a>
+            </div>      
+        </div>
+    </div>
+    
+
+</body>
+<script src="VOTACION.JS"></script>
+</html>

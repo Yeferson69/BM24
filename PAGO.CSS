@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+header{
+    font-family: "Noto Serif", serif;
+    align-items: center;
+    font-size: 22px;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    color: rgb(208, 206, 206);
+    background: linear-gradient(
+        rgb(0, 21, 90),
+        rgb(1, 27, 105),
+        rgb(1, 41, 163))
+        ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(249, 216, 145, 0), 
+        rgba(2, 31, 119, 0.683),
+        rgba(1, 26, 100, 0.857)
+        ),
+        url(imagen\ fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tittle{
+    position: relative;
+    padding-left: 30px; 
+}
+
+.logo{    
+    width: 150px;
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+
+.page{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidata {
+    width: 400px;
+    background: linear-gradient(
+        rgb(105, 105, 106),
+        rgb(134, 134, 135),
+        rgb(188, 188, 188))
+        ;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow:  5px 10px 10px rgb(94, 94, 94);
+    margin-right: 15px;
+    
+}
+
+.candidata h1{
+    font-size: 25px;
+    padding-top: 10px;
+    font-family: "Noto Serif", serif;
+    color: rgb(253, 251, 241);
+    margin-bottom: 5px;
+}
+
+.name{
+    font-size: 25px;
+    padding-top: 10px;
+    font-family: "Noto Serif", serif;
+    color: rgb(15, 15, 15);
+}
+
+.description{
+    font-family: "Petit Formal Script", cursive;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.candidata img {
+    max-width: 91%;
+    height: auto;
+    border-radius: 5px;
+}
+    
+
+@media screen and (max-width: 768px) {
+    .candidata {
+        width: 200px; /* Dos columnas en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .candidata {
+        width: 100%; /* Una columna en pantallas muy pequeñas */
+    }
+}
+
+
+.formulario{
+    width: 400px;
+    background: #031996ec;
+    padding: 30px;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(198, 194, 194);
+    margin-left: 10px;
+
+}
+
+.formulario h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls{
+    width: 100%;
+    background: #03199600;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #c3c3c4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.pagar{
+    color: rgb(1, 1, 123);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    background: linear-gradient(
+        rgb(174, 173, 173),
+        rgb(147, 147, 147), 
+        rgb(119, 119, 119)
+        );
+    border-color: rgb(241, 235, 235);
+    border-width: 4px;
+    border-style: outset;
+    border-radius: 5px;
+    padding: 10px;
+    width: 40%;
+    display: flex;
+    margin-left: 30%;
+}
+
+.pagar:hover{
+    background: linear-gradient(
+        rgb(181, 180, 180),
+        rgb(212, 212, 212),
+        rgb(168, 167, 167)
+        );
+    color: rgb(7, 7, 165);
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+#celular{
+    width: 10em;
+}

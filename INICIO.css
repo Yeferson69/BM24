@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo{
+    padding-right: 10px;
+    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(249, 216, 145, 0), 
+        rgba(2, 31, 119, 0.683),
+        rgba(1, 26, 100, 0.857)
+        ),
+        url(imagen\ fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 5.5rem;
+    background: #ccc;
+    background: radial-gradient(
+        rgb(248, 243, 237),
+        rgb(159, 159, 158), 
+        rgb(207, 207, 205)
+        );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; 
+    border-bottom: rgba(176, 153, 53);
+    border-bottom-style: groove;
+    border-bottom-width: 2px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+h2{
+    font-family: "Petit Formal Script", cursive;
+    font-size: 3rem;
+    background: #ccc;
+    background: radial-gradient(
+        rgb(239, 209, 97),
+        rgb(176, 153, 53), 
+        rgb(226, 211, 74)
+        );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+p {
+    font-family: "Srisakdi", system-ui;
+    font-size: 38px;
+    padding-top: 15px;
+    background: #ccc;
+    background: linear-gradient(
+        rgb(158, 157, 157),
+        rgb(206, 205, 203), 
+        rgb(249, 249, 249)
+        );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.buttons{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: italic;
+    position: relative;
+    bottom: -5rem;
+    background: transparent;
+    font-size: 30px;
+    line-height: 80px;
+}
+
+a{
+    color: rgb(1, 1, 123);
+}
+
+a:hover{
+    background: linear-gradient(
+        rgb(181, 180, 180),
+        rgb(212, 212, 212),
+        rgb(168, 167, 167)
+        );
+    color: rgb(7, 7, 165);
+    cursor: pointer;
+}
+
+.btn-1, .btn-2{
+    background: linear-gradient(
+        rgb(174, 173, 173),
+        rgb(147, 147, 147), 
+        rgb(119, 119, 119)
+        );
+    border-color: rgb(241, 235, 235);
+    border-width: 4px;
+    border-style: outset;
+    border-radius: 5px;
+    padding: 12px;
+}
