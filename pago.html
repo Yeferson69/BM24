@@ -24,17 +24,20 @@
 
     <section class="formulario">
         <h3> Realiza tu pago para que tu voto sea guardado correctamente</h3>
-        <form id="votingForm" action="conection.php" method="post">
-                <p class="hidden" id="nameSel" name="nameSeleccionada"></p>
+        <form id="votingForm" action="conection.php" method="post" ">
+                <p id="nameSel" name="nameSeleccionada"></p>
                 <p class="hidden" id="desSel" name="descripcionSeleccionada"></p>
                 <p class="hidden" id="Categoria" name="categoria"></p>
                 <input class="controls" type="text" id="name" name="user_name" required placeholder="Ingrese su Nombre"/>
                 <input class="controls" type="email" id="correo" name="user_correo" required placeholder="Ingrese su Email"/>
                 <input class="controls" type="number" id="celular" name="user_phone" required placeholder="Ingrese su Celular"/>
+
+                
             
             <input type="submit" value="enviar voto">
-
+            
         </form>
+        <button onclick=logFormData()>mostrar datos</button>
     </section>  
 </section>
 <script src="PAGO.JS"> </script>
