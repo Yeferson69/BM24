@@ -9,6 +9,7 @@ class Db
     private $pass      = 'BellMaInt2402';
     private $error     = '';
     private static $instance;
+    private $dbh;
 
     public function __construct()
     {
@@ -54,7 +55,7 @@ class Db
             throw new Exception("La conexión a la base de datos no está inicializada.");
 
         }else{
-            $stmt = $this->dbh->prepare("INSERT INTO votos (Nombre_Candidata, Region_Candidata, Categoria, Nombre_Votante, CelularVotante, Correo_Votante ) 
+            $stmt = $this->dbh->prepare("INSERT INTO votos (Nombre_Candidata, Region_Candidata, Categoria, Nombre_Votante, Celular_Votante, Correo_Votante ) 
             VALUES (:nameCandidata, :regionCandidata, :categoriaCandidata, :nombreVotante, :celularVotante, :correoVotante )");
 
             $stmt->bindValue(':nameCandidata', $nameCandidata, PDO::PARAM_STR);
