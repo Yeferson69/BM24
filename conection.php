@@ -1,6 +1,6 @@
 <?php
 
-// Conexión a la base de datos MySQL
+// Conexión a la base de datos SQL Server
 class Db 
     {
     private $host      = 'smc24.database.windows.net';
@@ -13,7 +13,7 @@ class Db
     public function __construct()
     {
         // DSN: cadena de conexión
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        $dsn = 'sqlsrv:Server=' . $this->host . ';dbname=' . $this->dbname;
 
         /* Opciones
             * Muy importante, para tener una buena conexión PDO
@@ -23,7 +23,7 @@ class Db
             PDO::ATTR_PERSISTENT    => true, //establecer a false si no se quieren conexiones persistentes
             PDO::ATTR_EMULATE_PREPARES => false, //no cambiar nunca
             PDO::ATTR_ERRMODE       => PDO::ERRMODE_EXCEPTION, //no cambiar nunca
-            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'" //juego de caracteres
+            PDO::SQLSRV_ATTR_INIT_COMMAND => PDO::SQLSRV_ENCODING_UTF8, //juego de caracteres,
         );
 
         // Crea nueva instancia de PDO
