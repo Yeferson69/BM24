@@ -13,22 +13,10 @@ class Db
     public function __construct()
     {
         // DSN: cadena de conexión
-        $dsn = 'sqlsrv:Server=' . $this->host . ';dbname=' . $this->dbname;
+        $dsn = 'sqlsrv:server=' . $this->host . ';Database=' . $this->dbname;
 
-        /* Opciones
-            * Muy importante, para tener una buena conexión PDO
-
-        */    
-        $options = array(
-            PDO::ATTR_PERSISTENT    => true, //establecer a false si no se quieren conexiones persistentes
-            PDO::ATTR_EMULATE_PREPARES => false, //no cambiar nunca
-            PDO::ATTR_ERRMODE       => PDO::ERRMODE_EXCEPTION, //no cambiar nunca
-            PDO::SQLSRV_ATTR_INIT_COMMAND => PDO::SQLSRV_ENCODING_UTF8, //juego de caracteres,
-        );
-
-        // Crea nueva instancia de PDO
         try{
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass);
         }
         // Captura los errores
         catch(PDOException $e){
